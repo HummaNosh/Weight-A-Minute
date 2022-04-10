@@ -1,4 +1,11 @@
+{
+  "date": "01/01/22",
+  "history_data":
 [
+  { "company": "somethign",
+    "financials":
+
+  [
     {
       "id": "123",
       "Title": "LEG",
@@ -15,3 +22,6 @@
       "Sets": "12"
     }
   ]
+  }
+]
+}
