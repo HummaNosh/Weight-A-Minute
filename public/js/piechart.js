@@ -3,7 +3,15 @@
 // anychart.onDocumentReady(function () {
 //   // set the data
 //   // create the chart
-
+//   var data = [
+//     { x: "White", value: 223553265 },
+//     { x: "Black or African American", value: 38929319 },
+//     { x: "American Indian and Alaska Native", value: 2932248 },
+//     { x: "Asian", value: 14674252 },
+//     { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
+//     { x: "Some Other Race", value: 19107368 },
+//     { x: "Two or More Races", value: 9009073 },
+//   ];
 //   var chart = anychart.pie();
 
 //   // set the chart title
@@ -13,27 +21,78 @@
 //   chart.data();
 //   chart.container("container");
 //   chart.draw();
+
 // });
 
+
 //  async function fetchData() {
-//     const urldata = require("seeds/HistoryData.json");
+//     const urldata = require(".HistoryData.json");
 //     const response = await fetch(urldata);
 //     const datapoints = await response.json();
 //     console.log(datapoints);
 //     return datapoints;
 // }
 
-// // display the chart in the container
+// anychart.onDocumentReady(function() {
 
-// var data = [
-//   { x: "White", value: 223553265 },
-//   { x: "Black or African American", value: 38929319 },
-//   { x: "American Indian and Alaska Native", value: 2932248 },
-//   { x: "Asian", value: 14674252 },
-//   { x: "Native Hawaiian and Other Pacific Islander", value: 540013 },
-//   { x: "Some Other Race", value: 19107368 },
-//   { x: "Two or More Races", value: 9009073 },
-// ];
+//     const urldata = require(".HistoryData.json");
+
+//     // set the data
+//     var urldata = [
+//         {const: "http://localhost:3001/HistoryData.json"},
+
+//         {x: "Black or African American", value: 38929319},
+//         {x: "American Indian and Alaska Native", value: 2932248},
+//         {x: "Asian", value: 14674252},
+//         {x: "Native Hawaiian and Other Pacific Islander", value: 540013},
+//         {x: "Some Other Race", value: 19107368},
+//         {x: "Two or More Races", value: 9009073}
+//     ];
+  
+//     // create the chart
+//     var chart = anychart.pie();
+  
+//     // set the chart title
+//     chart.title("Population by Race for the United States: 2010 Census");
+  
+//     // add the data
+//     chart.data(data);
+  
+//     // display the chart in the container
+//     chart.container('container');
+//     chart.draw();
+  
+//   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,15 +102,10 @@
 // var fetchData = [
 //     {x:"hjhujjlk"},
 // ]
-// async function fetchData() {
-//     const urldata = ("http://localhost:3001/HistoryData.json");
-//     const response = await fetch(urldata);
-//     const datapoints = await response.json();
-//     console.log(datapoints);
-//     return datapoints;
-  
 
-// } 
+
+
+// })
 // fetchData().then(datapoints => {
 //     const id = datapoints.historydata[0].financials.map(
 //         function(index){
@@ -63,7 +117,7 @@
 //     myChart.update();
 // })
 // fetchData();
-    // create the chart
+//     // create the chart
 //     var chart = anychart.pie();
   
 //     // set the chart title
@@ -75,11 +129,19 @@
 //     // display the chart in the container
 //     chart.container('container');
 //     chart.draw();
-  
-//   });
+//     async function fetchData() {
+       
+//         const response = await fetch(urldata);
+//         const datapoints = await response.json();
+//         console.log(datapoints);
+//         return datapoints;
+      
+//   };
  
 // var xmlhttp = new XMLHttpRequest();
-// var url = "http://localhost:3001/HistoryData.json";
+// // var url = require("./HistoryData.json")
+// // var url = "http://localhost:3001/HistoryData.json";
+
 // console.log(xmlhttp)
 // xmlhttp.open("GET",url);
 // // xmlhttp.send();
@@ -135,9 +197,10 @@
 // }
 
 
+// import Data from "./HistoryData.json"
 
 jQuery(document).ready(function () {
-     urlDataJSON = "seeds\HistoryData.json";
+     urlDataJSON = require("./HistoryData.json");
 
     $.getJSON(urlDataJSON, "", function (data) {
         var dataSlices = [];
