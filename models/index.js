@@ -1,11 +1,5 @@
 const User = require('./User');
+// const History = require("./History");
 
-module.exports = User
-// Signup.hasMany(Project, {
-//   foreignKey: 'user_id',
-//   onDelete: 'CASCADE'
-// });
 
-// Project.belongsTo(Signup, {
-//   foreignKey: 'user_id'
-// });
+module.exports = User;
