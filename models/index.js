@@ -1,6 +1,6 @@
 const User = require('./User');
 
-
+module.exports = User
 // Signup.hasMany(Project, {
 //   foreignKey: 'user_id',
 //   onDelete: 'CASCADE'
@@ -9,5 +9,3 @@ const User = require('./User');
 // Project.belongsTo(Signup, {
 //   foreignKey: 'user_id'
 // });
-
-module.exports = User;
