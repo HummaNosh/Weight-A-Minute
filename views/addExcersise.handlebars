@@ -1,1 +1,6 @@
-<h1> HUMMA SMELLS</h1>
+  {{#if logged_in}}
+             <li class = "navlist"><a href="/profile"><img src="images/emoji-sunglasses.svg" alt= "sunglasses emoji"/></a></li>
+             <li class = "navlist"><button class="no-button" id="logout">LOGOUT</button></li> 
+            {{else}}
+              <li class = "navlist"><a href="/signUp">Sign Up/Log In</a></li>
+            {{/if}}

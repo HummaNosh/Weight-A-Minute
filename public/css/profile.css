@@ -7,6 +7,11 @@ body{
 .col-sm-9{
   width: 50%;
 }
+
+h1{
+  display: flex;
+  justify-content: center;
+}
 /**
 * Panels
 */
