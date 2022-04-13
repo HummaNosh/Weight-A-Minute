@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/HummaNosh/Weight-A-Minute#readme",
   "dependencies": {
+    "aws-sdk": "^2.1114.0",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.3",
     "dotenv": "^16.0.0",

@@ -72,6 +72,8 @@ h3,
 h4,
 h5,
 h6 {
+  display: flex;
+    justify-content: center;
   font-weight: 400;
   font-family: "Quattrocento Sans", sans-serif;
   color: #afbac4;
