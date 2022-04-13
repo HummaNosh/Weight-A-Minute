@@ -28,5 +28,3 @@ ExerciseRecord.belongsTo(ExerciseBank, {
 // });
 
 module.exports = {User, WorkoutRecord, ExerciseBank, ExerciseRecord};
-
-// THIS IS THE ERROR - USER ONLY WORKS ON ITS OWN
