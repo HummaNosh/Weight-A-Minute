@@ -18,6 +18,12 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+  //   for (const project of projectData) {
+  //   await Project.create({
+  //     ...project,
+  //     user_id: users[Math.fl/oor(Math.random() * users.length)].id,
+  //   });
+  // }
 
   // This doesn't create date data - which we will need.
   const workout = await WorkoutRecord.bulkCreate(workoutData);
@@ -38,3 +44,12 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+  
+//   const SeedDatabase = async () => {
+//   const historyInfo = await History.bulkCreate(HistoryData, {
+//     individualHooks: true,
+//     returning: true,
+//   });
+// }
+// seedDatabase()
+// SeedDatabase();

@@ -3,12 +3,6 @@
     <meta content="text/html; charset=UTF-8" />
     <title>Weight IT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-    <!-- Animate.css -->
-    {{! <link href="plugins/animate-css/animate.css" type="text/css"/> }}
-    <!-- Magnific popup css -->
-    {{! <link href="plugins/magnific-popup/dist/magnific-popup.css" type="text/css"/> }}
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -20,6 +14,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/style.css" />
+          <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+      <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
   </head>
 
   <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -32,19 +28,17 @@
         </div>
         {{!-- <nav class="collapse navbar-collapse navbar-right" role="Navigation"> --}}
           <ul id="nav" class="nav navbar-nav navigation-menu">
-            <li><a data-scroll href="/">🏠</a></li>
-            <li><a href="#settings">⚙️</a></li>
-            <li><a href="/aboutme">ℹ️ </a></li>
-            <li><a href="#tutorial">▶️</a></li>
-            {{! <li><a data-toggle="modal-container" data-target="#login">LOG IN/SIGN UP</a></li> }}
-
+            <li class = "navlist"><a data-scroll href="/"><img src="/images/house.svg" alt= "house emoji"/></a></li>
+            <li class = "navlist"><a href="#settings">⚙️</a></li>
+            <li class = "navlist"><a href="/aboutme"><img src="images/info-circle.svg" alt= "info emoji"/> </a></li>
+            <li class = "navlist"><a href="#tutorial">▶️</a></li>
+  
             <!-- add in my profile if logged in -->
             {{#if logged_in}}
-              <a href="/profile">🧑</a>
-              |
-              <button class="no-button" id="logout">logout</button>
+             <li class = "navlist"><a href="/profile"><img src="images/emoji-sunglasses.svg" alt= "sunglasses emoji"/></a></li>
+             <li class = "navlist"><button class="no-button" id="logout">LOGOUT</button></li> 
             {{else}}
-              <a href="/signUp">Sign Up/Log In</a>
+              <li class = "navlist"><a href="/signUp">Sign Up/Log In</a></li>
             {{/if}}
           </ul>
         </nav>
@@ -53,19 +47,7 @@
     </header>
 
     {{{body}}}
-    <!-- 
-		Essential Scripts
-		=====================================-->
 
-    <!-- Main jQuery -->
-    {{! <script type="text/javascript" src="/meghna-premium/plugins/bootstrap/dist/js/bootstrap.js"></script>
-		<!-- Bootstrap 3.1 -->
-		<script type="text/javascript" src="/meghna-premium/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-		<!-- Slick Carousel -->
-		<script type="text/javascript" src="/meghna-premium/plugins/slick-carousel/slick/slick.min.js"></script>
-		<!-- Magnific popup -->
-		<script type="text/javascript" src="/meghna-premium/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>  }}
-    <!-- Custom js -->
     <script type="text/javascript" src="/js/script.js"></script>
 
     <footer id="footer" class="bg-one">
@@ -74,26 +56,16 @@
           <div class="col-lg-12">
             <div class="social-icon">
               <ul class="list-inline">
-                <li><a href="https://facebook.com/themefisher"><i
-                      class="tf-ion-social-facebook"
-                    ></i></a></li>
-                <li><a href="https://twitter.com/themefisher"><i
-                      class="tf-ion-social-twitter"
-                    ></i></a></li>
-                <li><a
-                    href="https://www.youtube.com/channel/UCx9qVW8VF0LmTi4OF2F8YdA"
-                  ><i class="tf-ion-social-youtube"></i></a></li>
-                <li><a href="https://dribbble.com/themefisher"><i
-                      class="tf-ion-social-dribbble-outline"
-                    ></i></a></li>
-                <li><a href="https://pinterest.com/themefisher"><i
-                      class="tf-ion-social-pinterest-outline"
-                    ></i></a></li>
+                <li><a href=""><img class ="icons" src="images/facebook.svg" alt= "facebook logo"/></a></li>
+                <li><a href=""><img class ="icons" src="images/twitter.svg" alt= "twitter logo"/></a></li>
+                <li><a href="https://github.com/HummaNosh/Weight-A-Minute" target="_blank">
+                      <img class ="icons" src="images/github.svg" alt= "github logo"/></a></li>
+                <li><a href="mailto:weightaminute@yahoo.co.uk"><img class ="icons" src="images/envelope.svg" alt= "email logo"/></a></li>
               </ul>
             </div>
 
             <div class="text-center">
-              <p>Design And Developed by the coolest developers on the planet
+              <p>Design And Developed by the coolest developers on the planet <img src="images/emoji-sunglasses.svg" alt= "sunglasses emoji"/>
               </p>
             </div>
           </div>

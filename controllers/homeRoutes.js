@@ -6,8 +6,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-  
-    // Pass serialized data and session flag into template
+  // Pass serialized data and session flag into template
     res.render('select',  {  
       logged_in: req.session.logged_in 
     });
@@ -17,56 +16,70 @@ router.get('/', async (req, res) => {
   }
 
 });
+
+// if you want the 'select page'
+router.get("/select", (req, res) => {
+  res.render('select');
+});
+
+// when you go to the signup page, if youre logged in, go to profile page..CHANGE
 router.get('/signUp', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/profile');
     return;
   }
   res.render('signUp');
 });
 
+// give me the add excersise page if not logged in go to sign up page
 router.get('/addExcersise', (req, res) => {
-
+  if (!req.session.logged_in) {
+    res.redirect('/signUp');
+    return;
+  }
+  // if session logged in already just give the page
+  if (req.session.logged_in) {
   res.render('addExcersise');
-});
+}});
 
+//  give me the history page if not logged in go to sign up page
 router.get('/history', (req, res) => {
-
+  if (!req.session.logged_in) {
+    res.redirect('/signUp');
+    return;
+  }
   res.render('history');
 });
 
-// bring in progress page
+// give me the progress page if not logged in go to sign up page
 router.get('/progress', (req, res) => {
-
+  if (!req.session.logged_in) {
+    res.redirect('/signUp');
+    return;
+  }
   res.render('progress');
 });
 
-// bring in dashboard page
+//  give me the dashboard page if not logged in go to sign up page
 router.get('/dashboard', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/select');
-    return;
-  }
-  res.render('dashboard');
-});
 
-router.get('/aboutme', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/select');
+  if (!req.session.logged_in) {
+    res.redirect('/signUp');
     return;
   }
+  res.render('dashboard', 
+  // {db_data: mysql_data});;
+// }
+)});
+
+//  give me the about me page
+router.get('/aboutme', (req, res) => {
   res.render('aboutme');
 });
 
+
 router.get('/profile', (req, res) => {
-  // if (req.session.logged_in) {
-  //   res.redirect('/');
-  //   return;
-  // }
-  console.log("pooooo")
   res.render('profile');
 });
 
@@ -74,6 +87,11 @@ router.get('/profile', (req, res) => {
 router.get('/createNewExercise', (req, res) => {
   res.render('createNewExercise')
 })
+
+
+router.get('/addExcersise', (req, res) => {
+  res.render('profile');
+});
 
 module.exports = router;
 
@@ -119,4 +137,3 @@ module.exports = router;
 //     res.status(500).json(err);
 //   }
 // });
-
