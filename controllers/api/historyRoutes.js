@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("../../models");
 const { ExerciseRecord } = require("../../models");
 
-router.get("/", async (req, res) => {
+router.get("/history", async (req, res) => {
   res.send("hello");
 });
 // if (!req.session.logged_in) {
