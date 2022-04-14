@@ -75,24 +75,6 @@ router.get('/createNewExercise', (req, res) => {
   res.render('createNewExercise')
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = router;
 
 

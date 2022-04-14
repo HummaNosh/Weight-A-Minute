@@ -51,9 +51,6 @@
 		preloader: false,
 		fixedContentPos: true
 	});
-
-
-
  /*	Animated section
 
 var wow = new WOW({

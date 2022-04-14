@@ -46,7 +46,8 @@ createExerciseButton.addEventListener('click', () => {
         weight4: weight4.value,
         weight5: weight5.value,
         unit: unitInput.value,
-        icon: exerciseType.value 
+        icon: exerciseType.value//,
+        //workout_id: localStorage.getItem("current_workout_id") 
     }
     pushNewData(newExerciseRecord);
 });
