@@ -25,4 +25,27 @@ function returnLocalStorage () {
 
 // startNewWorkout();
 
-console.log(newWorkoutButton);
+newWorkoutButton.addEventListener('click', () => {
+    console.log("Event listener working")
+});
+
+// createExerciseButton.addEventListener('click', () => {
+//     event.preventDefault();
+//     const newExerciseRecord = {
+//         exerciseName: exerciseName.value,
+//         sets: sets.value,
+//         reps1: rep1.value,
+//         reps2: rep2.value,
+//         reps3: rep3.value,
+//         reps4: rep4.value,
+//         reps5: rep5.value,
+//         weight1: weight1.value,
+//         weight2: weight2.value,
+//         weight3: weight3.value,
+//         weight4: weight4.value,
+//         weight5: weight5.value,
+//         unit: unitInput.value,
+//         icon: exerciseType.value 
+//     }
+//     pushNewData(newExerciseRecord);
+// });
