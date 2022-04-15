@@ -28,23 +28,49 @@ imageForm.addEventListener("submit", async event => {
   document.body.appendChild(img)
 })
 
+downloadform.addEventListener("submit", async event => {
+
+  event.preventDefault()
+  // const file = downInput.files[0]
+
+ 
+  const {url} = await fetch("/s3Url").then(res => res.json())
+
+
+  // get the image direclty to the s3 bucket
+  await fetch(url, {
+    method: "GET",
+    headers: {
+      "Content-Type": "multipart/form-data"
+    },
+    // body: file
+  })
+
+  const imageUrl = url.split('?')[0]
+  console.log(imageUrl)
+
+  const img = document.createElement("img")
+  img.src = imageUrl
+  document.body.appendChild(img)
+})
+
 // {{!-- hn new --}}
 
 // s3 stuff
 
 // 1
-const multer = require('multer')
-// 2
-const upload = multer({ dest: 'images/' })
+// const multer = require('multer')
+// // 2
+// const upload = multer({ dest: 'images/' })
 
-// 3
-app.post('/api/images', upload.single('image'), (req, res) => {
-  // 4
-  const imagePath = req.file.path
-  const description = req.body.description
+// // 3
+// app.post('/api/images', upload.single('image'), (req, res) => {
+//   // 4
+//   const imagePath = req.file.path
+//   const description = req.body.description
 
-  // Save this data to a database probably
+//   // Save this data to a database probably
 
-  console.log(description, imagePath)
-  res.send({description, imagePath})
-})
+//   console.log(description, imagePath)
+//   res.send({description, imagePath})
+// })

@@ -6,6 +6,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const aws = require('aws-sdk')
 
 const { generateUploadURL } = require ('./s3')
 
@@ -36,11 +37,54 @@ app.get('/s3Url', async (req, res) => {
 })
 
 
+
+
+
+
+
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.static('front'))
 app.use(routes);
+
+// ---------------------------------------------------------
+
+
+// parse application/x-www-form-urlencoded
+// app.use(bodyParser.urlencoded({ extended: false }))
+ 
+// // parse application/json
+// app.use(bodyParser.json())
+
+// // DB
+// const knex = require('knex')({
+//     client: 'sqlite3',
+//     connection: {
+//         filename: "./img.db"
+//     },
+//     useNullAsDefault: true
+// });
+
+// app.get('/', async (req, res) => {
+//     res.send('Hello vro!')
+// })
+
+
+// ---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
 
 
 sequelize.sync({ force: false }).then(() => {
