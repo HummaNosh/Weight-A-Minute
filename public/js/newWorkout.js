@@ -26,7 +26,8 @@ function returnLocalStorage () {
 // startNewWorkout();
 
 newWorkoutButton.addEventListener('click', () => {
-    console.log("Event listener working")
+    event.preventDefault(); // Comment this out eventually
+    startNewWorkout();
 });
 
 // createExerciseButton.addEventListener('click', () => {
