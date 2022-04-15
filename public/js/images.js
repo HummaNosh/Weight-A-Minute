@@ -1,7 +1,7 @@
-// // get input type file
+// get input type file
 // let file = document.getElementById("myfile");
 // let columns = document.querySelectorAll(".column");
-// // create array to store image tag
+// create array to store image tag
 // let arrImg = [];
 
 // // event handler for input type file

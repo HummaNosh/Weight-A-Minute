@@ -8,7 +8,7 @@ const express =require("express")
 const app = express();
 dotenv.config()
 
-const region = "eu-west-2"
+const region = "eu-west-1"
 const bucketName = "weightaminute"
 const accessKeyId = process.env.AWS_ACCESS_KEY_ID
 const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY
@@ -50,7 +50,7 @@ app.get('/download-file', function(req, res, next){
       {
         accessKeyId: "....",
         secretAccessKey: "...",
-        region: 'eu-west-2'
+        region: 'eu-west-1'
       }
     );
     var s3 = new AWS.S3();
@@ -73,7 +73,7 @@ app.get('/download-file', function(req, res, next){
     aws.config.update({
       AWS_ACCESS_KEY_ID: config.aws.AWS_ACCESS_KEY_ID,
       AWS_SECRET_ACCESS_KEY: config.aws.AWS_SECRET_ACCESS_KEY,
-      region: "eu-west-2"
+      region: "eu-west-1"
 
     });
     const s33= new aws.S3();
