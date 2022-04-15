@@ -29,3 +29,22 @@ imageForm.addEventListener("submit", async event => {
 })
 
 // {{!-- hn new --}}
+
+// s3 stuff
+
+// 1
+const multer = require('multer')
+// 2
+const upload = multer({ dest: 'images/' })
+
+// 3
+app.post('/api/images', upload.single('image'), (req, res) => {
+  // 4
+  const imagePath = req.file.path
+  const description = req.body.description
+
+  // Save this data to a database probably
+
+  console.log(description, imagePath)
+  res.send({description, imagePath})
+})
