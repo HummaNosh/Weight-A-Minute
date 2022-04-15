@@ -1,4 +1,4 @@
-const newWorkoutButton = ;
+const newWorkoutButton = document.querySelector('#new-workout-button');
 
 // IF logged in: 
 
@@ -25,4 +25,4 @@ function returnLocalStorage () {
 
 // startNewWorkout();
 
-console.log("script linked");
+console.log(newWorkoutButton);
