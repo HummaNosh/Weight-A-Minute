@@ -46,11 +46,14 @@ createExerciseButton.addEventListener('click', () => {
         weight4: weight4.value,
         weight5: weight5.value,
         unit: unitInput.value,
-        icon: exerciseType.value 
+        icon: exerciseType.value//,
+        //workout_id: localStorage.getItem("current_workout_id") 
     }
     pushNewData(newExerciseRecord);
 });
 const pushNewData = async (newExerciseRecord) => {
+     console.log(newExerciseRecord)
+
     const response = await fetch('/api/exercise', {
         method: "POST",
         headers: {
@@ -62,4 +65,4 @@ const pushNewData = async (newExerciseRecord) => {
     if (response.ok) {
         console.log("Success");
     };
-};
+}

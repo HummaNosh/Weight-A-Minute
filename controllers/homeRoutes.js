@@ -75,6 +75,10 @@ router.get('/profile', (req, res) => {
 
 // Dan's routes
 router.get('/createNewExercise', (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect('/signUp');
+    return;
+  }
   res.render('createNewExercise')
 })
 

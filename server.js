@@ -6,7 +6,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
+const multer = require("multer")
 const { generateUploadURL } = require ('./s3')
 
 // {{!-- hn new --}}
@@ -34,6 +34,7 @@ app.get('/s3Url', async (req, res) => {
   const url = await generateUploadURL()
     res.send({url})
 })
+
 
 
 app.use(express.json());

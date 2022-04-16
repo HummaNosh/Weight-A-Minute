@@ -1,7 +1,11 @@
 
 const imageForm = document.querySelector("#imageForm")
 const imageInput = document.querySelector("#imageInput")
+// var app = angular.module('myApp', []);
 
+// app.controller('myCtrl', function($scope) {
+//   $scope.carname = "Volvo";
+// });
 imageForm.addEventListener("submit", async event => {
 
   event.preventDefault()
@@ -20,12 +24,16 @@ imageForm.addEventListener("submit", async event => {
     body: file
   })
 
+  // bottom works!!!--------------------------------------------------------
   const imageUrl = url.split('?')[0]
   console.log(imageUrl)
 
   const img = document.createElement("img")
   img.src = imageUrl
-  document.body.appendChild(img)
+  document.getElementById("smells").appendChild(img).setAttribute("style", "width:15rem")
 })
 
+
+
 // {{!-- hn new --}}
+
