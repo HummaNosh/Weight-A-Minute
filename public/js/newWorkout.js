@@ -7,7 +7,7 @@ const startNewWorkout = async () => {
     const response = await fetch("/api/workout", {
         method: "POST", // might need headers/body, not sure
     });
-    console.log(response);
+    console.log(await response.body.getReader());
 };
 // Return the workout id
 // Update the current workout id in local storage

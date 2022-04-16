@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
             ...req.body,
             user_id: req.session.user_id // Does this work? Not sure how I'd check until working with the website
         });
-        res.status(200).json(req.body);
+        res.status(200).json(workoutData);
     } catch (err) {
         res.status(400).json(err);
     }
