@@ -5,9 +5,9 @@ const writeNames = (data) => {
 };
 
 const writeDates = (data) => {
-    document.querySelector("#date-1").innerHTML = "Hello";
-    document.querySelector("#date-2").innerHTML = "Goodbye";
-    document.querySelector("#date-3").innerHTML = "One More Thing";
+    document.querySelector("#date-1").innerHTML = "DATE TBC";
+    document.querySelector("#date-2").innerHTML = "DATE TBC";
+    document.querySelector("#date-3").innerHTML = "DATE TBC";
 };
 
 const writeSets = (data) => {
@@ -23,13 +23,17 @@ const writeReps = (data) => {
 }
 
 const writeWeights = (data) => {
-    document.querySelector("#weights-1").innerHTML = "Hello";
-    document.querySelector("#weights-2").innerHTML = "Goodbye";
-    document.querySelector("#weights-3").innerHTML = "One More Thing";
+    document.querySelector("#weights-1").innerHTML = weights(data[0]);
+    document.querySelector("#weights-2").innerHTML = weights(data[1]);
+    document.querySelector("#weights-3").innerHTML = weights(data[2]);
 };
 
 const reps = (data) => {
     return `${data.reps1} ${data.reps2} ${data.reps3} ${data.reps4} ${data.reps5} `
+}
+
+const weights = (data) => {
+    return `${data.weight1} ${data.weight2} ${data.weight3} ${data.weight4} ${data.weight5} ${data.unit}`
 }
 
 const getHistory = async () => {
