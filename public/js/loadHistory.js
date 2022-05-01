@@ -5,19 +5,27 @@ const writeNames = (data) => {
 };
 
 const writeDates = (data) => {
-
+    document.querySelector("#date-1").innerHTML = "Hello";
+    document.querySelector("#date-2").innerHTML = "Goodbye";
+    document.querySelector("#date-3").innerHTML = "One More Thing";
 };
 
 const writeSets = (data) => {
-
+    document.querySelector("#sets-1").innerHTML = "Hello";
+    document.querySelector("#sets-2").innerHTML = "Goodbye";
+    document.querySelector("#sets-3").innerHTML = "One More Thing";
 };
 
 const writeReps = (data) => {
-
+    document.querySelector("#reps-1").innerHTML = "Hello";
+    document.querySelector("#reps-2").innerHTML = "Goodbye";
+    document.querySelector("#reps-3").innerHTML = "One More Thing";
 }
 
 const writeWeights = (data) => {
-
+    document.querySelector("#weights-1").innerHTML = "Hello";
+    document.querySelector("#weights-2").innerHTML = "Goodbye";
+    document.querySelector("#weights-3").innerHTML = "One More Thing";
 };
 
 
