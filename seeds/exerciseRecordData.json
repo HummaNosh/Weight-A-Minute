@@ -2,7 +2,7 @@
     {
         "sets": 3,
         "unit": "kg",
-        "workout_id": 1,
+        "user_id": 1,
         "bank_id": 1,
         "reps1": 10,
         "reps2": 10,
@@ -14,7 +14,7 @@
     {
         "sets": 4,
         "unit": "kg",
-        "workout_id": 1,
+        "user_id": 1,
         "bank_id": 2,
         "reps1": 8,
         "reps2": 10,
@@ -28,7 +28,7 @@
     {
         "sets": 4,
         "unit": "kg",
-        "workout_id": 1,
+        "user_id": 1,
         "bank_id": 3,
         "reps1": 8,
         "reps2": 10,
@@ -42,7 +42,7 @@
     {
         "sets": 3,
         "unit": "kg",
-        "workout_id": 1,
+        "user_id": 1,
         "bank_id": 1,
         "reps1": 10,
         "reps2": 10,

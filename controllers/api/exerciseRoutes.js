@@ -5,7 +5,7 @@ const withAuth = require('../../utils/auth');
 // Post new exercise record.
 router.post('/', async (req, res) => {
     try {
-        console.log("Request recieved.")
+        const user_id = req.session.user_id;
         // Make exercise name all caps (so that there are no repeated exercises in the bank).
         const newExerciseName = req.body.exerciseName.toUpperCase();
 
@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
         
         // Create a new set of exercise data using the request and the returned 'row.id' value. 
         // Want to try and include session data for '1' - at the moment creates record for only workout 1.
-        const newExerciseData = await createExerciseRecord(req.body, row.id, 1);
+        const newExerciseData = await createExerciseRecord(req.body, row.id, user_id);
 
         // Creates a new exercise record and saves it to the exercise bank. 
         const exerciseRecord = await ExerciseRecord.create(newExerciseData);
@@ -31,14 +31,11 @@ router.post('/', async (req, res) => {
 });
 
 // Export this function? 
-function createExerciseRecord(body, bank_id, workout_id) {
-    console.log("Create Exercise Record running");
-    console.log(bank_id, workout_id);
-    console.log(body.unit);
+function createExerciseRecord(body, bank_id, user_id) {
+    console.log("The user id in the createExerciseRecord function is: " + user_id);
     return {
         "sets": body.sets,
         "unit": body.unit,
-        "workout_id": workout_id,
         "bank_id": bank_id,
         "reps1": body.reps1,
         "reps2": body.reps2,
@@ -49,7 +46,8 @@ function createExerciseRecord(body, bank_id, workout_id) {
         "weight2": body.weight2,
         "weight3": body.weight3,
         "weight4": body.weight4,
-        "weight5": body.weight5
+        "weight5": body.weight5,
+        "user_id": user_id
     }
 };
 

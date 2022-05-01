@@ -48,8 +48,11 @@ createExerciseButton.addEventListener('click', () => {
         unit: unitInput.value,
         icon: exerciseType.value 
     }
+    console.log("New exercise data: ");
+    console.log(newExerciseRecord);
     pushNewData(newExerciseRecord);
 });
+
 const pushNewData = async (newExerciseRecord) => {
     const response = await fetch('/api/exercise', {
         method: "POST",
@@ -60,6 +63,6 @@ const pushNewData = async (newExerciseRecord) => {
     });
 
     if (response.ok) {
-        console.log("Success");
+        console.log("Successfully pushed new exercise data to database");
     };
 };
