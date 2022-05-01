@@ -1,7 +1,7 @@
 const writeNames = (data) => {
-    document.querySelector("#name-1").innerHTML = "Hello";
-    document.querySelector("#name-2").innerHTML = "Goodbye";
-    document.querySelector("#name-3").innerHTML = "One More Thing";
+    document.querySelector("#name-1").innerHTML = "EXERCISE 1";
+    document.querySelector("#name-2").innerHTML = "EXERCISE 2";
+    document.querySelector("#name-3").innerHTML = "EXERCISE 3";
 };
 
 const writeDates = (data) => {
