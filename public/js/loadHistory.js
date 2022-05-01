@@ -50,8 +50,13 @@ const getHistory = async () => {
 const readData = async () => {
     const data = await getHistory();
     const total = data.length;
-    const recent = [data[total-1], data[total-2], data[total-3]];
-    return recent;
+    if (total > 2) {
+        const recent = [data[total-1], data[total-2], data[total-3]];
+        return recent;
+    }
+    else {
+        alert("Please record three exercises before trying to view your history. \n Click new workout below the table to record another exercise.")
+    }
 }
 
 const writeData = async () => {

@@ -9,6 +9,7 @@ Weight A Minute is a gym application that allows users to create a unique gym ro
 - [License](#License)
 - [Technologies Used](#TechnologiesUsed)
 - [Contributors](#Contributors)
+- [Template Credit](#Template)
 
 ## 2. <a name='Usage'></a>Usage
 
@@ -48,3 +49,12 @@ This project is licensed under the MIT License.
 - Daniel Bowen: <a href="https://github.com/djbowen95">GitHub</a>
 - Sumaya Gure: <a href="https://github.com/SuM949">GitHub</a>
 - Fatumo Abdullahi: <a href="https://github.com/Fatumoabdullahi">GitHub</a>
+
+## 6. <a name='Template'></a>Template Credit  
+While we modelled some of our CSS from scratch, we also used a professional Bootstrap template to help design our main landing page, our header and footers, and the front end for some of our core features. We would like to acknoweldge and give credit to this template, the Meghna-Premium template by ThemeFisher.  
+
+The template and more information about the provider can be found here:  
+
+https://themefisher.com/products/meghna-free-responsive-one-page-business-template/  
+
+The template is licenced under MIT and free to use for non-commercial reasons. 
