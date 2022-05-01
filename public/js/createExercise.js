@@ -63,3 +63,5 @@ const pushNewData = async (newExerciseRecord) => {
         console.log("Success");
     };
 };
+
+console.log("Succesfully linked");
