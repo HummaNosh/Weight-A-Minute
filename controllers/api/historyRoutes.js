@@ -11,17 +11,18 @@ router.get("/", async (req, res) => {
     console.log("hello");
     const exercise_records = await ExerciseRecord.findAll();
 
-    console.log(
+    /* console.log(
       exercise_records.every(
         (exercise_record) => exercise_record instanceof ExerciseRecord
       )
-    ); // true
-    console.log(
-      "All exercise_records:",
-      JSON.stringify(exercise_records, null, 2)
-    );
+    ); */ // true
 
-    res.status(200).json(exercise_records);
+    const filtered = await exercise_records.filter(exRec => exRec.user_id === 4);
+
+    console.log("All user's exercise_records: ");
+    console.log(filtered); //JSON.stringify(exercise_records, null, 2)
+
+    res.status(200).json(filtered);
   } catch (err) {
     res.status(400).json(err);
   }
