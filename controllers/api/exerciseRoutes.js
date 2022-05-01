@@ -6,6 +6,7 @@ const withAuth = require('../../utils/auth');
 router.post('/', async (req, res) => {
     try {
         console.log("Request recieved.")
+        console.log(req.session.user_id);
         // Make exercise name all caps (so that there are no repeated exercises in the bank).
         const newExerciseName = req.body.exerciseName.toUpperCase();
 
