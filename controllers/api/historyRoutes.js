@@ -4,11 +4,7 @@ const { ExerciseRecord } = require("../../models");
 
 router.get("/", async (req, res) => {
   try {
-    // if (!req.session.logged_in) {
-    //   res.status(400).json({ message: "You are not logged in." });
-    //   return;
-    // }
-    console.log("hello");
+    console.log("The history API route is being used.");
     const exercise_records = await ExerciseRecord.findAll();
 
     /* console.log(
@@ -18,9 +14,6 @@ router.get("/", async (req, res) => {
     ); */ // true
 
     const filtered = await exercise_records.filter(exRec => exRec.user_id === 4);
-
-    console.log("All user's exercise_records: ");
-    console.log(filtered); //JSON.stringify(exercise_records, null, 2)
 
     res.status(200).json(filtered);
   } catch (err) {
