@@ -17,9 +17,9 @@ const writeSets = (data) => {
 };
 
 const writeReps = (data) => {
-    document.querySelector("#reps-1").innerHTML = "Hello";
-    document.querySelector("#reps-2").innerHTML = "Goodbye";
-    document.querySelector("#reps-3").innerHTML = "One More Thing";
+    document.querySelector("#reps-1").innerHTML = reps(data[0]);
+    document.querySelector("#reps-2").innerHTML = reps(data[1]);
+    document.querySelector("#reps-3").innerHTML = reps(data[2]);
 }
 
 const writeWeights = (data) => {
@@ -28,6 +28,9 @@ const writeWeights = (data) => {
     document.querySelector("#weights-3").innerHTML = "One More Thing";
 };
 
+const reps = (data) => {
+    return `${data.reps1} ${data.reps2} ${data.reps3} ${data.reps4} ${data.reps5} `
+}
 
 const getHistory = async () => {
     const response = await fetch('/api/history', {
