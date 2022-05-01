@@ -11,9 +11,9 @@ const writeDates = (data) => {
 };
 
 const writeSets = (data) => {
-    document.querySelector("#sets-1").innerHTML = "Hello";
-    document.querySelector("#sets-2").innerHTML = "Goodbye";
-    document.querySelector("#sets-3").innerHTML = "One More Thing";
+    document.querySelector("#sets-1").innerHTML = data[0].sets;
+    document.querySelector("#sets-2").innerHTML = data[1].sets;
+    document.querySelector("#sets-3").innerHTML = data[2].sets;
 };
 
 const writeReps = (data) => {
@@ -47,8 +47,8 @@ const readData = async () => {
     return recent;
 }
 
-const writeData = () => {
-    const recentData = readData();
+const writeData = async () => {
+    const recentData = await readData();
     writeNames(recentData);
     writeDates(recentData);
     writeSets(recentData);
