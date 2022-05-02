@@ -1,13 +1,14 @@
-/* Form CSS */
+/* form css */
+
 body {
   padding: 1em;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 15px;
-  color: #b9b9b9;
-  background-color: #353b43;
+  color: #aca9a9;
+  background-color: #c0bcbc;
 }
 h2 {
-  color: #f0a500;
+  color: #eea70d;
   text-align: center;
 }
 input,
@@ -15,49 +16,37 @@ select {
   width: 100%;
   padding: 1em;
   line-height: 1.4;
+  background-color: #f9f9f9;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
-  -webkit-transition: 0.35s ease-in-out;
-  -moz-transition: 0.35s ease-in-out;
-  -o-transition: 0.35s ease-in-out;
-  transition: 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
 }
 .container {
-  max-width: 38em;
-  padding: 1em 3em 2em 3em;
-  margin: 0em auto;
-  border-radius: 4.2px;
+  max-width: 500px;
+  margin: 0px auto;
+  background-color: #fff;
+  padding: 1em 3em 3em 3em;
+  border-radius: 4px;
   box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
 }
-.row {
-  zoom: 1;
-}
-.row:before,
-.row:after {
-  content: "";
-  display: table;
-}
-.row:after {
-  clear: both;
-}
+
 .col-half {
-  padding-right: 10px;
+  padding-right: 12px;
   float: left;
   width: 50%;
 }
-.col-half:last-of-type {
-  padding-right: 0;
-}
+
 .col-third {
   padding-right: 10px;
-  float: left;
-  width: 33.33333333%;
+  float: none;
+  width: 30%;
 }
 .col-third:last-of-type {
   padding-right: 0;
 }
-
+.row:after.row:before {
+  display: table;
+  content: "";
+}
 .exercise_name {
   padding-top: 0px;
 }
@@ -66,10 +55,14 @@ select {
   align-items: center;
   display: flex;
 }
-@media only screen and (max-width: 540px) {
+.col-third:last-of-type {
+  padding: 0px;
+}
+@media only screen and (max-width: 545pc) {
   .col-half {
     width: 100%;
-    padding-right: 0;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
-/*CSS Form end */
+/*form css end */
